@@ -1,38 +1,159 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Sidebar Example</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/462a6ce7e1.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <div class="main-menu">
-      <div class="menu-content">
-        <span>Logo</span>
-        <ul></ul>
+
+<head>
+  <title>Sidebar Example</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="https://kit.fontawesome.com/462a6ce7e1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="main-menu">
+    <div class="menu-content">
+      <span>Logo</span>
+      <ul></ul>
+    </div>
+  </div>
+  <div class="sidebar">
+    <h3>Medical Options</h3>
+    <div class="tabs-wrapper">
+      <div class="tab-item active">Proceeder</div>
+      <div class="tab-item">State</div>
+      <div class="tab-item">View</div>
+    </div>
+    <div class="list-wrapper">
+      <div class="search-box">
+        <input type="search" name="search" id="search" placeholder="Search" />
+      </div>
+      <span></span>
+      <div class="list"></div>
+      <hr />
+      <div class="logs">
+        <span>Logs:</span>
+        <div class="logs-wrapper">
+          <div class="log-item">
+            <ul>
+              <li>name</li>
+              <li>something here need to write...</li>
+            </ul>
+            <i class="fa-regular fa-circle-xmark"></i>
+          </div>
+          <div class="log-item">
+            <ul>
+              <li>name</li>
+              <li>something here need to write...</li>
+            </ul>
+            <i class="fa-regular fa-circle-xmark"></i>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="sidebar">
-      <h3>Medical Options</h3>
-      <div class="list-wrapper">
-        <div class="search-box">
-          <input type="search" name="search" id="search" placeholder="Search" />
-        </div>
-        <span></span>
-        <div class="list"></div>
-      </div>
-      <!-- <div class="menu">
+    <!-- <div class="menu">
         <select></select>
       </div> -->
+  </div>
+  <div class="content">
+    <div class="title">
+      <div>
+        <h1>Medical records</h1>
+        <span>Mohammad / 555055 / 888</span>
+      </div>
+      <img
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmarksking.com%2Fwp-content%2Fuploads%2FMark2013.jpg&f=1&nofb=1&ipt=4f7de8148dd87424110395902f76b67864dcd6f31af1ea7e5e6eb9ba618f048a&ipo=images"
+        alt="sss" />
     </div>
-    <div class="content">
-      <h1>Medical records</h1>
+    <div class="img-wrapper">
       <img src="./assets/chart.png" alt="chart" />
     </div>
+    <div class="tables">
+      <div class="table-tabs-wrapper">
+        <div class="tab-item active">Current status</div>
+        <div class="tab-item">Old Status</div>
+        <div class="tab-item">All Status</div>
+      </div>
+      <div class="panel-tables">
+        <div class="panel">
+          <table>
+            <thead>
+              <th>Code</th>
+              <th>Terminate</th>
+              <th>Tooth</th>
+              <th>Clinician</th>
+              <th>Consultation</th>
+              <th>Date</th>
+              <th>State</th>
+              <th>Options</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>00124</td>
+                <td>Caries</td>
+                <td>3. 1st molar (6-yr molar)</td>
+                <td>Nor</td>
+                <td>CON2300001</td>
+                <td>5/12/2023 9:28:20</td>
+                <td>
+                  <span class="badge">New</span>
+                </td>
+                <td class="options">
+                  <button class="icon-btn">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                  <button class="icon-btn">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </td>
+              </tr>
 
-    <script src="./sidebar.js" type="module"></script>
-  </body>
+              <td>00124</td>
+              <td>Caries</td>
+              <td>3. 1st molar (6-yr molar)</td>
+              <td>Nor</td>
+              <td>CON2300001</td>
+              <td>5/12/2023 9:28:20</td>
+              <td>
+                <span class="badge">New</span>
+              </td>
+              <td class="options">
+                <button class="icon-btn">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+                <button class="icon-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+              </tr>
+
+              <td>00124</td>
+              <td>Caries</td>
+              <td>3. 1st molar (6-yr molar)</td>
+              <td>Nor</td>
+              <td>CON2300001</td>
+              <td>5/12/2023 9:28:20</td>
+              <td>
+                <span class="badge">New</span>
+              </td>
+              <td class="options">
+                <button class="icon-btn">
+                  <i class="fa-solid fa-play"></i>
+                </button>
+                <button class="icon-btn">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="float-button" title="save">
+    <i class="fa-solid fa-floppy-disk"></i>
+  </button>
+  <script src="./sidebar.js" type="module"></script>
+  <script src="./tabs.js" type="module"></script>
+</body>
+
 </html>

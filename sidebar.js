@@ -31,7 +31,6 @@ const activeProsProxy = new Proxy({ value: activePros }, {
       } else {
         sidebar.style.display = 'block'
       }
-      console.log('Value changed:', value);
     }
 
     target[property] = value;
@@ -70,7 +69,7 @@ mainMenuListItems.forEach(function (item) {
       activeProsProxy.value = menuFilter;
       dataSet = menuFilter.setData;
       const menuData = menuFilter.setData.map(el => `<div class="item-wrapper">
-      <input type="radio" id="${el.code}" name="list-item" value="${el.id}" class="radio-list" />
+      <i class="fa-solid fa-life-ring"></i>
       <div class="cpt">
       <label for="${el.code}">Code: ${el.code}</label>
       <label for="${el.code}" class="desc" >Description: ${el.description.substring(0, 20)}...</label>
@@ -87,10 +86,20 @@ searchInput.addEventListener('change', () => {
 
 //* get all radios
 const radios = document.querySelectorAll('.radio-list');
+const radioParent = document.querySelectorAll('.item-wrapper')
 
+console.log({radios})
 radios.forEach(function (radioButton) {
-  radioButton.addEventListener("change", function () {
-    if (this.checked) {
+  console.log({radioButton})
+  radioButton.addEventListener("change", function (evt) {
+    console.log("first")
+    radioParent.forEach(wrapper => {
+      wrapper.classList.remove('item-wrapper-radio-checked')
+    })
+    if (evt.target.checked) {
+      console.log("first")
+      console.log({tt: evt.target.parentNode})
+      evt.target.parentNode.classList.add('item-wrapper-radio-checked')
       const radioValue = this.value;
       const menuFilter = data.find(el => el.id === parseInt(radioValue));
       const menuData = menuFilter.setData.map(el => `<div class="radio-wrapper">
